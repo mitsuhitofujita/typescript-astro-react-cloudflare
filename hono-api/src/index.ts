@@ -1,27 +1,23 @@
-import { Hono } from 'hono'
-import { cors } from 'hono/cors'
+import { fromHono } from "chanfana";
+import { Hono } from "hono";
+import { TaskCreate } from "./endpoints/taskCreate";
+import { TaskDelete } from "./endpoints/taskDelete";
+import { TaskFetch } from "./endpoints/taskFetch";
+import { TaskList } from "./endpoints/taskList";
 
-// アプリケーションの初期化
-const app = new Hono()
+// Start a Hono app
+const app = new Hono();
 
-// CORSミドルウェアの設定
-app.use('*', cors())
+// Setup OpenAPI registry
+const openapi = fromHono(app, {
+	docs_url: "/",
+});
 
-// ルートエンドポイントの実装
-app.get('/', (c) => {
-  return c.json({
-    message: 'Hello World from Hono API!',
-    timestamp: new Date().toISOString()
-  })
-})
+// Register OpenAPI endpoints
+openapi.get("/api/tasks", TaskList);
+openapi.post("/api/tasks", TaskCreate);
+openapi.get("/api/tasks/:taskSlug", TaskFetch);
+openapi.delete("/api/tasks/:taskSlug", TaskDelete);
 
-// APIエンドポイントの実装
-app.get('/api/hello', (c) => {
-  return c.json({
-    message: 'Hello World from API endpoint!',
-    timestamp: new Date().toISOString()
-  })
-})
-
-// Cloudflare Workersにエクスポート
-export default app
+// Export the Hono app
+export default app;
