@@ -2,4 +2,4 @@
 !*.env.sample
 node_modules
 .pnpm-store
-
+*backup
