@@ -1,0 +1,27 @@
+{
+    "name": "TypeScript + Astro + React + Cloudflare Workers",
+    // TypeScript対応のベースイメージ
+    "image": "mcr.microsoft.com/devcontainers/typescript-node:20",
+    // 独自Feature（wrangler）を指定
+    "features": {
+        "./.features/wrangler": {}
+    },
+    // Astroのデフォルトポートをフォワード
+    "forwardPorts": [
+        4321
+    ],
+    // 環境変数の設定
+    "runArgs": [
+        "--env-file",
+        ".devcontainer/devcontainer.env"
+    ],
+    // 拡張機能や設定のカスタマイズ
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "astro-build.astro-vscode",
+                "biomejs.biome"
+            ]
+        }
+    }
+}
