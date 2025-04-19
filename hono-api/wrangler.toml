@@ -1,0 +1,14 @@
+name = "hono-api"
+main = "src/index.ts"
+compatibility_date = "2023-01-01"
+node_compat = true
+
+[build]
+command = "pnpm build"
+
+[build.upload]
+format = "modules"
+main = "./index.js"
+
+[env.production]
+name = "hono-api-production"
