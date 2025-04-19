@@ -1,23 +1,21 @@
 {
-  "name": "astro-app",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev --host 0.0.0.0",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/cloudflare": "^12.5.0",
-    "@astrojs/react": "^4.2.4",
-    "astro": "^5.7.4",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
-  },
-  "devDependencies": {
-    "@types/react": "^19.1.2",
-    "@types/react-dom": "^19.1.2",
-    "typescript": "^5.8.3"
-  }
+	"name": "astro-app",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro build && wrangler dev",
+		"astro": "astro",
+		"deploy": "astro build && wrangler deploy",
+		"cf-typegen": "wrangler types"
+	},
+	"dependencies": {
+		"@astrojs/cloudflare": "^12.5.0",
+		"astro": "^5.7.4"
+	},
+	"devDependencies": {
+		"@cloudflare/workers-types": "^4.20250419.0",
+		"wrangler": "^4.12.0"
+	}
 }
