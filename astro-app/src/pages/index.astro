@@ -1,4 +1,6 @@
 ---
+import ApiFetcher from '../components/ApiFetcher';
+import HelloWorld from '../components/HelloWorld';
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 
@@ -8,4 +10,6 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout>
 	<Welcome />
+	<HelloWorld client:load />
+	<ApiFetcher client:load />
 </Layout>
