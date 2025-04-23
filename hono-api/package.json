@@ -6,11 +6,17 @@
 		"deploy": "wrangler deploy",
 		"dev": "wrangler dev --ip 0.0.0.0 --port 8787",
 		"start": "wrangler dev",
-		"cf-typegen": "wrangler types"
+		"cf-typegen": "wrangler types",
+		"generate:migration": "drizzle-kit generate:migration",
+		"apply:migration": "drizzle-kit apply:migration"
 	},
 	"dependencies": {
 		"chanfana": "^2.0.2",
+		"dotenv": "^16.5.0",
+		"drizzle-kit": "^0.31.0",
+		"drizzle-orm": "^0.42.0",
 		"hono": "^4.4.7",
+		"sqlite3": "^5.1.7",
 		"zod": "^3.23.8"
 	},
 	"devDependencies": {

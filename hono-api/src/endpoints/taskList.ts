@@ -1,5 +1,7 @@
 import { Bool, Num, OpenAPIRoute } from "chanfana";
+import type { Context } from "hono";
 import { z } from "zod";
+import { TaskList as TaskListSchema } from "../schemas/taskList";
 import { Task } from "../types";
 
 export class TaskList extends OpenAPIRoute {
@@ -46,8 +48,12 @@ export class TaskList extends OpenAPIRoute {
 
 		// Implement your own object list here
 
+		const { results } = await c.env.D1DB.prepare("SELECT * FROM tasks").all();
+		console.log(results);
+
 		return {
 			success: true,
+			results,
 			tasks: [
 				{
 					name: "Clean my room",

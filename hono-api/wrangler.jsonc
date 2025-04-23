@@ -13,7 +13,13 @@
 	"vars": {
 		"API_ORIGIN": "http://localhost:4321"
 	},
-
+	"d1_databases": [
+		{
+			"binding": "D1DB",
+			"database_name": "hono-api",
+			"database_id": "01e4adab-9285-4b0d-902e-ffed0a720967"
+		}
+	]
 	/**
 	 * Smart Placement
 	 * Docs: https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
