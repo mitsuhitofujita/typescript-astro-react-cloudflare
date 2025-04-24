@@ -46,3 +46,13 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+`wrangler d1 create astro-app`
+
+`pnpm drizzle-kit generate`
+
+`wrangler d1 execute astro-app --file ./drizzle/migrations/0000_sleepy_naoko.sql`
+
+`wrangler d1 execute astro-app --command "SELECT * FROM greetings;"`
+
+`wrangler d1 execute astro-app --command "SELECT name FROM sqlite_master WHERE type='table';"`

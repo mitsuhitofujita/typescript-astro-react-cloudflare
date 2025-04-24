@@ -1,0 +1,18 @@
+---
+import ProductList from '../../components/ProductList';
+import { getGreetings } from '../../db';
+// 商品一覧ページ（SSR）
+import Layout from '../../layouts/Layout.astro';
+
+// ページロード時にデータを取得
+const env: Env = { ...Astro.locals.runtime.env, D1DB: Astro.locals.runtime.env.D1DB };
+const products = await getGreetings(env);
+---
+
+<Layout title="Greetings" description="Greetings page">
+  <main>
+    <h1>Products</h1>
+    
+    <ProductList products={products} />
+  </main>
+</Layout>

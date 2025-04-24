@@ -7,6 +7,7 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
+	output: "server", // SSRモードを有効化
 	adapter: cloudflare({
 		platformProxy: {
 			enabled: true,

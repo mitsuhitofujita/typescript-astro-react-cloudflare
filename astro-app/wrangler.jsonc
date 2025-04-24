@@ -7,16 +7,21 @@
 	"name": "astro-app",
 	"main": "./dist/_worker.js/index.js",
 	"compatibility_date": "2025-04-19",
-	"compatibility_flags": [
-		"nodejs_compat"
-	],
+	"compatibility_flags": ["nodejs_compat"],
 	"assets": {
 		"binding": "ASSETS",
 		"directory": "./dist"
 	},
 	"observability": {
 		"enabled": true
-	}
+	},
+	"d1_databases": [
+		{
+			"binding": "D1DB",
+			"database_name": "astro-app",
+			"database_id": "5c1cb88e-fbe4-4ba4-98bb-d51e276cc463"
+		}
+	]
 	/**
 	 * Smart Placement
 	 * Docs: https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement

@@ -8,7 +8,9 @@
 		"preview": "astro build && wrangler dev --ip 0.0.0.0 --port 4321",
 		"astro": "astro",
 		"deploy": "astro build && wrangler deploy",
-		"cf-typegen": "wrangler types"
+		"cf-typegen": "wrangler types",
+		"generate:migration": "drizzle-kit generate:migration",
+		"apply:migration": "drizzle-kit apply:migration"
 	},
 	"dependencies": {
 		"@astrojs/cloudflare": "^12.5.0",
@@ -16,8 +18,12 @@
 		"@types/react": "^19.1",
 		"@types/react-dom": "^19.1",
 		"astro": "^5.7.4",
+		"dotenv": "^16.5.0",
+		"drizzle-kit": "^0.31.0",
+		"drizzle-orm": "^0.42.0",
 		"react": "^19.1",
-		"react-dom": "^19.1"
+		"react-dom": "^19.1",
+		"sqlite3": "^5.1.7"
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20250419.0",
