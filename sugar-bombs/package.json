@@ -1,0 +1,20 @@
+{
+	"name": "sugar-bombs",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro build && wrangler dev",
+		"astro": "astro",
+		"deploy": "astro build && wrangler deploy",
+		"cf-typegen": "wrangler types"
+	},
+	"dependencies": {
+		"@astrojs/cloudflare": "^12.5.1",
+		"astro": "^5.7.5"
+	},
+	"devDependencies": {
+		"@cloudflare/workers-types": "^4.20250424.0"
+	}
+}
