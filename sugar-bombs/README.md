@@ -46,3 +46,12 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+## 構築手順
+
+UnoCSS
+
+```
+npm install -D unocss @unocss/astro @unocss/preset-uno @unocss/reset
+```
+

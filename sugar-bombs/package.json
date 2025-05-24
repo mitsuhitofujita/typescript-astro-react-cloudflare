@@ -20,6 +20,10 @@
 		"react-dom": "^19.1.0"
 	},
 	"devDependencies": {
-		"@cloudflare/workers-types": "^4.20250424.0"
+		"@cloudflare/workers-types": "^4.20250424.0",
+		"@unocss/astro": "^66.1.2",
+		"@unocss/preset-uno": "^66.1.2",
+		"@unocss/reset": "^66.1.2",
+		"unocss": "^66.1.2"
 	}
 }
